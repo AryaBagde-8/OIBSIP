@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<style>
+.calculator{
+padding:10px;
+border-radius:1em;
+height:450px;
+width:480px;
+margin:auto;
+background-color:#293939;
+}
+.box{
+font-family:sans-serif;
+font-size: 25px;
+border:solid rgb(182, 179, 179) 0.5px;
+border-radius:5px;
+width:95%;
+height:75%;
+color:white;
+}
+.button{
+font-family:sans-serif;
+font-size: 25px;
+background-color:#faa029;
+color:black;
+border:solid black 0.5px;
+width:100%;
+border-radius:5px;
+height:70%;
+outline:none;
+border:none;
+}
+hr{
+width:80%;
+}
+h1{
+    color: rgb(247, 146, 38);
+font-family:Helvatica,sans-serif;
+}
+</style>
+</head>
+<body background="blur-background-1.jpg">
+<center><h1>CALCULATOR</h1></center>
+<hr><br><br>
+<table class="calculator" border="7">
+<tr>
+<td colspan="3"><input class="box" type="text" id="result" disabled></td>
+<td><input class="button" type="button" value="Clr" onclick = "clearScreen()" "style=background-color:#00FF7f;"/></td>
+</tr>
+<tr>
+<td><input class="button" type="button" name="One" value="1" onclick="display('1')"/></td>
+<td><input class="button" type="button" name="Two" value="2" onclick="display('2')"/></td>
+<td><input class="button" type="button" name="Three" value="3" onclick="display('3')"/></td>
+<td><input class="button" type="button" name="Add" value="+" onclick="display('+')"/></td>
+</tr>
+<tr>
+<td><input class="button" type="button" name="Four" value="4" onclick="display('4')"/></td>
+<td><input class="button" type="button" name="Five" value="5" onclick="display('5')"/></td>
+<td><input class="button" type="button" name="Six" value="6" onclick="display('6')"/></td>
+<td><input class="button" type="button" name="Sub" value="-" onclick="display('-')"/></td>
+</tr>
+<tr>
+<td><input class="button" type="button" name="Seven" value="7" onclick="display('7')"/></td>
+<td><input class="button" type="button" name="Eight" value="8" onclick="display('8')"/></td>
+<td><input class="button" type="button" name="Nine" value="9" onclick="display('9')"/></td>
+<td><input class="button" type="button" name="Mul" value="*" onclick="display('*')"/></td>
+</tr>
+<tr>
+<td><input class="button" type="button" name="Dot" value="." onclick="display('.')"/></td>
+<td><input class="button" type="button" name="Zero" value="0" onclick="display('0')"/></td>
+<td><input class="button" type="button" name="Equal" value="=" onclick="calculate()"/></td>
+<td><input class="button" type="button" name="Div" value="/" onclick="display('/')"/></td>
+</tr>
+</table>
+<script type="text/javascript">
+function clearScreen() {
+document.getElementById("result").value = "";
+}
+function display(value) {
+document.getElementById("result").value += value;
+}
+function calculate() {
+var p = document.getElementById("result").value;
+var q = eval(p);
+document.getElementById("result").value = q;
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
